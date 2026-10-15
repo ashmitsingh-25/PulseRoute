@@ -18,8 +18,8 @@ export const PulseRouteProvider = ({ children }) => {
   const routingEngineRef = useRef(new RoutingEngine(DEFAULT_ROUTING_WEIGHTS));
   const bedLockServiceRef = useRef(new BedLockService());
 
-  // View Mode: 'split' | 'ambulance' | 'er'
-  const [viewMode, setViewMode] = useState('split');
+  // View Mode: 'landing' | 'paramedic' | 'hospital' | 'split'
+  const [viewMode, setViewMode] = useState('landing');
   const [audioMuted, setAudioMuted] = useState(false);
 
   // Paramedic Wizard Step: 1 (Voice Triage), 2 (Hospital Selection), 3 (En Route HUD)
